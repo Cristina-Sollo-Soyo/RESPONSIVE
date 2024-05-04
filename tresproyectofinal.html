@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="tresstyle.css">
+    <script src="tresscript.js" defer></script>
+</head>
+<body>
+
+    <!-- EMPECEMOS CON EL HEADER. DONDE IRA EL LOGO Y EL MENU DE NAVEGACION -->
+        <header class="header">
+            <div class="headerLogo">
+                <a href="tresproyectofinal.html"><img src="media/logo.png" alt="Logotipo" class="logo"></a>
+            </div>
+            <nav class="headerNav">
+                    <button type="button" class="header__burguer" id="botonMenu">
+                        <!--aqui le damos id para usarlo en js. para que habra el menu burguer-->
+                        <i class="fa-solid fa-bars" id="iconoBoton"></i>
+                  </button>
+                <ul class="headerLista" id="lista">
+                    <li class="headerLista__elemento">Inicio</li>
+                    <li class="headerLista__elemento">Sobre mi</li>
+                    <li class="headerLista__elemento">Lenguajes</li>
+                    <li class="headerLista__elemento">Trabajos</li>
+                    <li class="headerLista__elemento">Pagina</li>
+                    <li class="headerLista__elemento">Contacto</li>
+                    <li
+                    class="header__elementoLista header__elementoLista--desaparece"
+                  ></li>
+                </ul>
+            </nav>
+        </header>
+
+    <!-- EMPEZAMOS CON EL CUERPO DE NUESTRA PAGINA: EL MAIN -->
+
+    <main>
+        <section class="presentacion">
+            <div class="presentacionContainer">
+                <img src="media/yo.png" alt="foto-cristina" class="presentacionFoto" id="">
+            </div>
+            <div class="presetacionNombre">
+                <h1 class="nombre">Cristina Sollo Soyo</h1>
+                <p class="profesion">-Diseño Web Full Stack-</p>
+            </div>
+        </section>
+
+        <section class="sectionInteres">
+            <div class="sectionInteres__datos">
+                <h2 class="sectionInteres__titulo">Datos de interés</h2>
+                <p class="parrafo">Hola, mi nombre es Cristina. Soy <span class="subra">diseñadora web</span>, con master en 
+                    <span class="subra">desarrollo web Full Stack.</span> 
+                    Siempre he sentido gran inquietud por el mundo de la programación, por ello me encantaría 
+                    formar parte de tu proyecto web; y aportar todo mi entusiamos.</p>
+                <a href="#" class="button ">Descargar CV</a>
+            </div>
+        </section>
+
+    <!-- SECTION CARDS SOBRE LOS LENGUAJES -->
+    
+    
+        <section class="sectionCards">
+            
+            <div class="sectionCards__container sectionCards__delante">
+                <div class="sectionCards__card">
+                    <img src="media/html-img.png" alt="HTML" class="lenguaje">
+                    <h3 class="lenguaje__nombre">HTML</h3>
+                </div>
+                <div class="sectionCards__card sectionCards__atras">
+                    <h3 class="lenguaje__nombreAtras">HTML</h3>
+                    <p class="lenguaje__parrafo">HTML (Hypertext Markup Language) es
+                        el lenguaje de marcado estándar utilizado para la creación de páginas web. 
+                        Permite describir la estructura de un documento web, mediante etiquetas que
+                        especifican elementos tales como encabezados, párrafos, enlaces, imágenes, entre otros.</p>
+                    <div class="link">
+                        <a href="#" class="detalles">Detalles</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sectionCards__container sectionCards__delante">
+                <div class="sectionCards__card">
+                    <img src="media/cssdos.png" alt="HTML" class="lenguaje">
+                    <h3 class="lenguaje__nombre">CSS</h3>
+                </div>
+                <div class="sectionCards__card sectionCards__atras">
+                    <h3 class="lenguaje__nombreAtras">CSS</h3>
+                    <p class="lenguaje__parrafo">CSS, que significa Cascading Style Sheets (Ho-
+                        jas de Estilo en Cascada), es un lenguaje de diseño que se utiliza para describir la
+                        presentación de documentos escritos enHTML o XML. CSS permite a los desarrolladores controlar 
+                        aspectos visuales como el color, la disposición y el tamaño de los elementos, mejorando la 
+                        accesibilidad y la experiencia del usuario.</p>
+                    <div class="link">
+                        <a href="#" class="detalles">Detalles</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sectionCards__container sectionCards__delante">
+                <div class="sectionCards__card">
+                    <img src="media/secuencia-de-comandos-de-java.png" alt="HTML" class="lenguaje">
+                    <h3 class="lenguaje__nombre">JAVASCRIPT</h3>
+                </div>
+                <div class="sectionCards__card sectionCards__atras">
+                    <h3 class="lenguaje__nombreAtras">JAVASCRIPT</h3>
+                    <p class="lenguaje__parrafo">Una función es un bloque de código diseñado para realizar una tarea concreta.
+                        Solo se ejecutan cuando se las “invoca”(se las llama). Cuando se desarrolla una aplicación
+                        compleja, es muy habitual utilizar una y otra vez las mismas instrucciones.</p>
+                    <div class="link">
+                        <a href="#" class="detalles">Detalles</a>
+                    </div>
+                </div>
+            </div>
+        </section> 
+
+      
+
+        <!-- CAROUSEL DE TRABAJOS REALIZADOS EN CLASE -->
+        <section class="carousel">
+            <divs class="carouselSection">
+                <h2 class="carouselTitulo">TRABAJOS REALIZADOS EN CLASE</h2>
+                <p class="carouselParrafo">Estos son algunos ejemplos de actividades realizadas en clase. Hay desde menu cortinas, mural de fotos donde hemos 
+                    tenido que organizar las imagenes, efecto de aperturas de acordeon, pagina de viajes completa que realilzamos como
+                    actividad de clase. Ademas de algunos ejemplos que tambien introduzco de las actividades asincronas.
+                </p>
+            </div>
+            <div class="sectionCarousel">  <!--aqui vamos hacer un slider(carousel de imagenes el cual quiero que se pase o bien automaticamente o pulsando)-->
+                <div class="sectionCarousel__carousel" id="slider">
+                    <section class="slider-section">
+                        <img src="media/PaginasEjemClase/pagina-bem.png">
+                    </section>
+                    <section class="slider-section">
+                        <img src="media/PaginasEjemClase/pagina-suit.png">
+                    </section>
+                    <section class="slider-section">
+                        <img src="media/PaginasEjemClase/pagina-bienes.png">
+                    </section>
+                    <section class="slider-section">
+                        <img src="media/PaginasEjemClase/pagina-festivales.png">
+                    </section>
+                    <section class="slider-section">
+                        <img src="media/PaginasEjemClase/pagina-viajes.png">
+                    </section>
+                    <section class="slider-section">
+                        <img src="media/PaginasEjemClase/pagina-trainee.png">
+                    </section>
+                    <section class="slider-section">
+                        <img src="media/PaginasEjemClase/pagina-menucortina.png">
+                    </section>
+                    <section class="slider-section">
+                        <img src="media/PaginasEjemClase/pagina-overlay.png">
+                    </section>
+                    <section class="slider-section">
+                        <img src="media/PaginasEjemClase/pagina-acordeon.png">
+                    </section>
+                    <section class="slider-section">
+                        <img src="media/PaginasEjemClase/pagina-cocina.png">
+                    </section>
+                </div>
+                <div class="btn-left"><i class='bx bx-chevron-left'></i></div>
+                <div class="btn-right"><i class='bx bx-chevron-right'></i></div>
+            </div>
+        </section>
+
+        <!-- SECTION VIDEO: ahora quiero hacer una section con un video de ejemplo de una de las paginas, donde se vea parte de su funcionalidad y efectos -->
+        <section class="sectionVideo">
+            <div class="sectionVideo__texto">
+                <h2 class="sectionVideo__titulo">VIDEO PAGINA WEB</h2>
+                <p class="sectionVideo__parrafo">Esta pagina fue un trabajo que realizamos en clase entre todos los compañeros. Cada uno aportando su propio estilo.</p>
+            </div>
+            <div class="sectionVideo__video">
+                <video controls autoplay muted>
+                    <source src="media/ejemplo-pagina-festival-video.mp4" type="video/mp4" class="video">
+                </video> 
+            </div>
+        </section>
+
+          <!-- FORMULARIO -->
+          <section class="sectionFormulario">
+            <div class="containerFormulario">
+                <h1 class="formularioTitulo">Contacto</h1>
+
+                <div class="formularioInfo">
+
+                    <div class="formularioCompletar">
+                        <h3 class="formularioContacto">Contacto</h3>
+                        <form action="#" class="formularioCompletar__form">
+                            <p class="forumularioParrafo">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" name="nombre" id="nombre" class="formularioInput">
+                            </p>
+                            <p class="forumularioParrafo">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" class="formularioInput">
+                            </p>
+                            <p class="forumularioParrafo">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" name="telefono" id="telefono" class="formularioInput">
+                            </p>
+
+                            <p class="forumularioParrafo">
+                                <label for="motivo">Motivo</label>
+                                <input type="text" name="motivo" id="motivo" class="formularioInput">
+                            </p>
+                            <p class="forumularioParrafo excepcionFormulario">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="formularioInput"></textarea>
+
+                            </p>
+                            <p class="forumularioParrafo excepcionFormulario">
+                                <button type="submit" class="formularioBoton botonFormulario">Enviar</button>
+                            </p>
+                        </form>
+
+                    </div>
+
+                    <div class="containerContacta">
+                        <h4 class="contactaMis__datos">Mis Datos</h4>
+                        <ul class="contactaLista">
+                            <li class="contactaLista__elemento"><i class="fa-solid fa-location-dot"></i> Sevilla</li>
+                            <li class="contactaLista__elemento"><i class="fa-solid fa-phone-volume"></i> 650841203</li>
+                            <li class="contactaLista__elemento"><i class="fa-solid fa-square-envelope"></i> cristinasollosoyo@alumnos.cei.es</li>
+                        </ul>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- PIE DE PAGINA -->
+    <footer class="footer">
+
+        <div class="footer__rrss">
+            
+            <ul class="footer__listaSocials">
+                <li class="footer__elementoSocial"><i class="fa-brands fa-x-twitter"></i></li>
+                <li class="footer__elementoSocial"><i class="fa-brands fa-instagram"></i></li>
+                <li class="footer__elementoSocial"><i class="fa-brands fa-linkedin-in"></i></li>
+                <li class="footer__elementoSocial"><i class="fa-brands fa-facebook-f"></i></li>
+            </ul>
+            
+        </div>
+
+        
+    </footer>
+
+
+    
+</body>
+</html>

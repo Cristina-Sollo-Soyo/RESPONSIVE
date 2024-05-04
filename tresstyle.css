@@ -1,0 +1,671 @@
+body{
+    margin: 0;
+    box-sizing: 0;
+}
+
+.logo{
+    margin: 0.3rem;
+    width: 10rem;
+    height: 5rem;
+}
+
+@font-face{
+   font-family: Fragmento; src: url(fuentes/fragment_core/Fragmentcore.otf);
+   
+}
+
+:root{
+    --color__header: #2a2e3862;
+    
+
+}
+
+.header{
+    background-color: var(--color__header);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    height: 6rem;
+    backdrop-filter: blur(.1rem);/*con esta funcion se difumina lo que pase por detras del header*/
+    z-index: 1;
+}
+
+.headerLista{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.headerLista__elemento{
+    margin: 0 1rem; 
+    font-family:monospace;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+.headerNav{
+    display: flex;
+    align-items: center;
+
+}
+
+.header__burguer{
+    
+    cursor: pointer;/*cambiamos al dedo*/
+    background-color: transparent;
+    border: none;  /*con este le quitamos el recuadro que esta alrededor del menu burguer */
+    font-size: 1.3rem;
+    padding: 0 1rem;
+    display: none;
+    
+}
+
+/* aqui va el responsi */
+@media screen and (max-width:768px) {
+  
+    .header__burguer{
+        display: block;
+    }
+
+    .headerLista{
+        display: none;
+    }
+
+    .header{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .headerNav{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* MAIN */
+
+/* .presentacionFoto{
+    width: 20rem;
+    height: 15rem;
+     border: 2rem solid black; 
+    border-top-right-radius:10px;
+	border-bottom-left-radius:10px;
+	transition:all 1s;
+
+} */
+
+.presentacionFoto{
+    width: 150rem;
+    height: 100rem;
+}
+
+
+
+.presentacionContainer {
+	width: 30%;
+	height: 60%;
+	box-sizing: border-box;
+	border: 5px white solid;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+	img { width: 100%; height: 74vh; }
+}
+
+
+
+
+.presentacion{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('/public/cole.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+@media screen and (max-width: 768px){
+
+    .presentacion{
+        flex-direction: column;
+    }
+    
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+
+/* .presentacionContainer{
+    padding: 6rem;
+    width: 150px;
+	height: 150px;
+	box-sizing: border-box;
+	border: 5px white solid;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+	img { width: 100%; height: auto; }
+} */
+
+
+
+.nombre{
+    font-size: 50px;
+    position: relative;
+    font-family: monospace;
+    
+}
+
+.nombre::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+.nombre:hover::before{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.nombre::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: #2a2e3865;
+    z-index: -1;
+    transition: transform .3s ease;
+  }
+  
+  
+
+.profesion{
+    margin: 0 5rem;
+    font-size: 20px;
+    align-items: center center; 
+    font-family: monospace;
+}
+
+
+
+
+
+
+/* section interés */
+
+.sectionInteres{
+    background-color: wheat;
+    background-position: center center;
+    background-size: cover;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    /* margin-top: 3rem; */
+    font-family: monospace;
+}
+
+.sectionInteres__titulo{
+    font-size: 2rem;
+    
+}
+
+.sectionInteres__datos{
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto; 
+    
+}
+
+.parrafo{
+    font-size: 1.5rem;
+}
+
+.subra{
+    color: #5D7B6E; /*aqui subrayamos a lo que nos dedicamos para que sea mas facil y rapido la busqueda del cliente*/
+}
+
+.button{
+    background-color: #5D7B6E;
+    color: #ffffff;
+    /* font-weight: 70vh; */
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    font-family: monospace;
+}    
+
+@media screen and (max-width: 768px) {
+    .sectionInteres__titulo{
+        margin: 5rem 0 0 0;
+    }
+    
+}
+
+/* CARDS */
+
+.sectionCards__titulo{
+    align-items: center;
+    font-family: monospace;
+}
+
+
+.sectionCards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #5D7B6E;
+}
+
+.sectionCards__container{
+   position: relative;
+   width: 300px;
+   height: 350px;
+   margin: 0 5rem;
+}
+    
+.sectionCards__card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.sectionCards__delante{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px black;
+}
+
+@media screen and (max-width:768px) {
+    .sectionCards{
+    padding: 7rem 0 0 0;
+    }
+    .sectionCards__container{
+        margin: 0;
+    }
+   
+}
+
+.lenguaje{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ 
+}
+
+.lenguaje__nombre{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: wheat;
+    background-color: rgba(0, 0, 0, .4);
+    text-align: center;
+    font-family: monospace;
+}
+
+.sectionCards__atras{
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px;
+}
+
+.link{
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+.detalles{
+    color: #f3f3f3;
+}
+
+.lenguaje__nombreAtras{
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    font-family: monospace;
+}
+
+.lenguaje__parrafo{
+    letter-spacing: 1px;
+    font-family: monospace;
+}
+
+.sectionCards__container:hover .sectionCards__delante{
+    transform: perspective(600px) rotateY(180deg);
+    
+
+}
+
+.sectionCards__container:hover .sectionCards__atras{
+    transform: perspective(600px) rotateY(360deg);
+
+}
+
+
+
+/* FORMULARIO */
+
+.sectionFormulario{
+    padding: 0 1.5rem;
+    background-color: rgb(179, 159, 122);
+    font-family: monospace;
+}    
+    
+.containerFormulario{
+    max-width: 73rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5rem;
+}
+
+.formularioTitulo{
+    text-align: center;
+    font-size: 3rem;
+    font-family: monospace;
+}
+
+.formularioInfo{
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3) ;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.formularioContacto{
+    margin: 1rem;
+}
+.formularioCompletar{
+    padding: 1rem;
+    background-color: #5D7B6E;
+    color: white;
+}
+
+.containerContacta{
+    background-color: wheat;
+}
+
+.formularioCompletar__form{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*aqui con display grid vamos aplicar dos columnas para el formulario*/
+}
+
+.forumularioParrafo{
+    margin: 0.5rem;
+    padding: 1rem;
+   
+}
+     
+
+
+.formularioBoton, .formularioInput{
+    width: 100%;
+    padding: .7rem;
+    border: none;
+    background: none;
+    border-bottom: 1px solid wheat;
+    outline: 0;
+    color: white;
+    resize: none;
+}
+
+.botonFormulario{
+    background-color: wheat;
+    border: 0;
+    text-transform: uppercase; /*aqui le aplicamos la letra mayuscula al boton*/
+    color: #5D7B6E;
+    padding: 1rem;
+}
+
+.formularioBoton:hover, .formularioBoton:focus{
+    background-color: rgb(179, 159, 122);
+    color: white;
+    transition: background-color 1s ease-out; /*aportamos suavida a la hora del cambio de color en el boton*/
+    outline: 0;
+}
+.excepcionFormulario{
+    grid-column: 1 / 3;  /* con esto hacemos que el boton caiga al final del formulario */
+}
+
+/* AHORA VAMOS CON LA PARTE DE MI INFORMACION PERSONAL */
+
+.containerContacta{
+    text-align: center;
+    margin:  0 1rem 0;
+
+}
+
+.contactaLista{
+    list-style: none;
+    padding: 0;
+    
+}
+
+.contactaLista__elemento{
+    padding: 0.3rem;
+}
+
+/* RESPONSIVE FORMULARIO */
+
+@media (max-width:768px) {
+    .sectionFormulario{
+        padding: 0;
+    }
+    .formularioInfo{
+        margin: 0.5rem;
+        display: block;
+        width: 20rem;
+        
+    }
+    .formularioCompletar{
+        margin: 0.5rem;
+        padding: 2rem;
+        width: 15rem;
+    }
+}
+
+
+/* FOOTER */
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    padding: 2rem 0;
+    margin:  0;
+    background-color: #5D7B6E;
+}
+
+.footer__listaSocials{
+    display: flex;
+    align-items: center ;
+    list-style-type: none;
+    
+    padding: 0;
+}
+
+.footer__elementoSocial{
+    margin: 0 1.3rem;
+    cursor: pointer;
+}
+
+/* SECTION CAROUSEL */
+
+.carouselSection{
+    width: 30rem;
+    margin: 0 5rerem;
+    padding: 1rem;
+    font-family: monospace;
+}
+
+
+.carousel {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: wheat;
+    background: linear-gradient( wheat);
+    padding: 20px; 
+}
+
+.sectionCarousel {
+    position: relative;
+    width: 31.25rem;
+    height: 18.75rem;
+    background-color: #e0e0e0;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.66);
+    border-radius: 15px;
+    overflow: hidden;
+  
+}
+
+.sectionCarousel__carousel {
+    width: 1000%;
+    height: 100%;
+    display: flex;
+
+}
+
+@media screen and (max-width:768px) {
+    .carouselSection{
+        width: 20rem;
+    }
+    .sectionCarousel{
+        width: 20rem;
+    }    
+    
+}    
+
+
+.slider-section {
+    width: calc(100% / 10);
+    height: 100%;
+}
+
+.slider-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.btn-left,
+.btn-right {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #ffffff81;
+    transform: translate(0,-50%);
+    transition: .5s ease;
+    user-select: none;
+}
+
+.btn-left:hover,
+.btn-right:hover {
+    background-color: #333333d4;
+    color: #fff;
+}
+
+.btn-left {
+    left: 10px;
+}
+
+.btn-right {
+    right: 10px;
+}
+
+
+/* section video */
+
+.sectionVideo{
+    padding: 2rem;
+    height: 50vh;
+    /* width: 99%; */
+    background-color: #5D7B6E;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sectionVideo__texto{
+    width: 30%;
+    font-family: monospace;
+}
+
+.sectionVideo__video{
+    position: relative;
+    width: 32rem;
+    height: 19rem;
+    background-color: #e0e0e0;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.66);
+    border-radius: 15px;
+    overflow: hidden;
+   
+}
+
+.video{
+    overflow: hidden;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    
+}
+
+@media screen and (max-width:768px) {
+    .sectionVideo{
+        flex-direction: column;
+    }
+    .sectionVideo__video{
+        width: 20rem;
+    }
+    .sectionVideo__texto{
+        width: 10rem;
+    }
+}
+
